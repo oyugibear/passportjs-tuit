@@ -14,7 +14,7 @@ passport.use(new GoogleStrategy({
     // passport call back function
     User.findOne({googleId: profile.id}).then((currentUser) => {
         if(currentUser){
-            console.log("user id: ", currentUser)
+            console.log("user is: ", currentUser)
         } else {
             new User({
                 username: profile.displayName,
